@@ -29,5 +29,22 @@ class ListaDeUsuarios {
         }
     }
 
+    //Ejercicio 5
+
+    fun filtrarPorEdad(minEdad: Int): List<Usuario> {
+        return listaDeUsuarios.filter { it.edad > minEdad }
+    }
+
+
+    fun showListaFiltrada(minEdad: Int) {
+        val listaFiltrada = filtrarPorEdad(minEdad)
+        if (listaFiltrada.isEmpty()) {
+            println("No hay usuarios mayores a $minEdad años.")
+        } else {
+            println("Usuarios mayores a $minEdad años:")
+            listaFiltrada.forEach { println("Nombre: ${it.nombre}, Edad: ${it.edad}") }
+        }
+    }
+
 }
 

@@ -46,5 +46,9 @@ fun main(){
     listaUsuarios.eliminarUsuario("Ana Gómez")
 
     listaUsuarios.mostrarLista()
+    println()
+    //Ejercicio5
+    println("Filtrando usuarios mayores de 30 años:")
+    listaUsuarios.showListaFiltrada(30)
 
 }
